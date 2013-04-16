@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' type="text/css" href='/stylesheets/style.css' />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/main.css">
+    <script type="text/javascript" src="/javascripts/jquery.js"></script>
+    <script type="text/javascript" src="/javascripts/main.js"></script>
+
+
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <p>
+	This is a stand-alone web-based application that takes a URL as input. The application will
+request the contents at the location supplied. If the URL points to a resource that is not HTML, it
+will output the content type returned. Otherwise, it will read the HTML data and output the title of
+the page and the description, followed by a list of clickable links on the page.
+    </p>
+	
+	<div id="input-form">
+		<form class="form-search" action="/test/jstest/">
+		  <input id="input-url" type="text" value="http://www.fuse.tv/" placeholder="Enter a URL to begin" class="input-medium search-query">
+		  <button type="submit" class="btn">Search</button>
+		</form>
+		<div id="waiting-bar"<span class="label label-info">Loading...</span></div>
+	</div>
+	
+	<div id="output-content"></div>
+
+  </body>
+</html>
